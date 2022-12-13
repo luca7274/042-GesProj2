@@ -34,8 +34,17 @@ Description : Page pour la page d'accueil du site imprimante.
     </header>
     <main>
         <!-- <h1 class="h1Accueil">Ajouter une imprimante</h1> -->
+
+        <?php
+        include("database.php");
+        $db = new Database();
+        $imprimante = $db -> getAllImprimantes();
+
+        echo "<form methode='post' action='checkImprimante.php'>"; 
+        ?>
+
+
         <div class="Printer">
-            <form action="">
                 <div id="FormPrinter">
                     <label for="printerMaker">Fabricant de l'imprimante : </label>
                     <input type="text" id="printerName" name="printerName">
@@ -60,10 +69,11 @@ Description : Page pour la page d'accueil du site imprimante.
                     <label for="printerPrice">Prix de l'impriante : </label>
                     <input type="text" id="printerPrice" name="printerPrice">
                     <input type="submit" value="Ajouter" name="submit">
-
                 </div>
-            </form>
         </div>
+        <?php
+        echo "</form>";
+        ?>
     </main>
     <footer>
         <hr>
