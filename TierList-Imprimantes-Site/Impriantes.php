@@ -42,3 +42,15 @@ Description : Page pour la page d'accueil du site imprimante.
 </body>
 
 </html>
+
+<?php
+include("Database.php");
+$db = new Database();
+$imprimantes = $db->getAllImprimantes();
+foreach($imprimantes as $imprimant){
+    echo "<form method='post' action='detail.php?idImprimante=". $imprimant["idImprimante"] ."'>";
+    echo $imprimant["impFabriquant"] . ": ";
+    echo $imprimant["impModele"] . " ";
+    echo "<input type='submit' value='detail'></form><br><br>";
+    }
+?>

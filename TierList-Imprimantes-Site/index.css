@@ -6,6 +6,12 @@ p{
     font-size: 17px;
 }
 
+.listeImprimante{
+    display: flex;
+    text-align: center;
+    margin-left: 42%;
+}
+
 .h1Accueil{
     text-align: center;
 }
