@@ -109,7 +109,7 @@
     }
 //requete sql qui ajoute une recette
     public function addOneimprimante($impFabriquant, $printerModel, $printerTechnologie, $printerSpeed, $printerBac, $printerWeight, $printerResolution, $printerWidth, $printerLength, $printerHeigth, $printerPrice){
-        $sql = "INSERT INTO t_recette (`impFabriquant`, `printerModel`, `printerTechnologie`, `printerSpeed`, `printerBac`, `printerWeight`, `printerResolution`, `printerWidth`, `printerLength`, `printerHeigth` , `printerPrice`) VALUES (:impFabriquant, :printerModel, :printerTechnologie, :printerSpeed, :printerBac, :printerWeight, :printerResolution, :printerWidth, :printerLength, :printerHeigth)";
+        $sql = "INSERT INTO t_Imprimante (`idImprimante`, `impFabriquant`, `impModele`, `impTechImpression`, `impVitesseImpression`, `impCapaciteBacPapier`, `impPoids`, `impResolution`, `impLargeur`, `impLongeur`, `imphauter` , `impPrix`) VALUES (DEFAULT,:impFabriquant, :printerModel, :printerTechnologie, :printerSpeed, :printerBac, :printerWeight, :printerResolution, :printerWidth, :printerLength, :printerHeigth, :printerPrice)";
         $binds = [];
         $binds["impFabriquant"] = ["value" => $impFabriquant , "type" => PDO::PARAM_STR];
         $binds["printerModel"] = ["value" => $printerModel , "type" => PDO::PARAM_STR];
