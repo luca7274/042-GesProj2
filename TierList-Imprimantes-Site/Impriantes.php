@@ -50,7 +50,10 @@ $imprimantes = $db->getAllImprimantes();
 foreach($imprimantes as $imprimant){
     echo "<form method='post' action='detail.php?idImprimante=". $imprimant["idImprimante"] ."'>";
     echo $imprimant["impFabriquant"] . ": ";
-    echo $imprimant["impModele"] . " ";
-    echo "<input type='submit' value='detail'></form><br><br>";
+    echo $imprimant["impModele"] . "<br>";
+    echo "<input type='submit' value='detail'></form><br>";
+    echo "<form method='post' action='suprimer.php?idImprimante=". $imprimant["idImprimante"] ."'>";
+    echo "<input type='submit' value='suprimer'></form><br><br><br>";
+
     }
 ?>

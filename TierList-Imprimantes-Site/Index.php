@@ -28,6 +28,11 @@ Description : Page pour la page d'accueil du site imprimante.
     </header>
     <main>
         <h1 class="h1Accueil">Accueil</h1>
+        <p>Voici un projet qui à pour but de répertorier des imprimantes (30) all in one. Ce projet à été réalisé durant le module P_Prod à l'ETML. 
+            Sur ce site vous pouvez lire l'accueil, ajouter une imprimante à l'aide d'un formulaire sur la page "Ajouter une imprimante" et voir 
+            toutes les imprimantes répertorier sur notre base de données, cette dernière est réaliser avec MySQL.
+        </p>
+        <img src="./img/imprimante.jpg" alt="image dd'imprimante">
     </main>
     <footer>
         <hr>

@@ -99,12 +99,12 @@
 
     }
 //requete sql qui efface un prof
-    public function deleteOneRecette($idRecette){
+    public function deleteOneImprimante($idImprimante){
 
-        $sql = "DELETE FROM t_recette WHERE idRecette='" . $idRecette . "'";
+        $sql = "DELETE FROM t_imprimante WHERE idimprimante='" . $idImprimante . "'";
         $req = $this->querySimpleExecute($sql);
-        $idRecette = $this->formatData($req);
-        return $idRecette;
+        $idimprimante = $this->formatData($req);
+        return $idimprimante;
 
     }
 //requete sql qui ajoute une recette
